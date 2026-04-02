@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CMSBlazor.Client.Views.Administration.ListRolesPage"
+             xmlns:icon="clr-namespace:CMSBlazor.Client.Utilities"
+             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Toolkit.TextInputLayout;assembly=Syncfusion.Maui.Toolkit"
+             BackgroundColor="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}"
+             Title="Roles">
+    
+    
+     <Grid RowDefinitions="1,auto,*">
+
+        <BoxView Grid.Row="0" BackgroundColor="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}">
+            <BoxView.Shadow>
+                 <Shadow Brush="{AppThemeBinding Dark=White,Light=Black}" Offset="0,0" Radius="5" Opacity="0.5" />
+            </BoxView.Shadow>
+        </BoxView>
+         
+         <Grid x:Name="gridCreateRole" Grid.Row="1" ColumnDefinitions="*,*">
+             <Button Grid.Column="0"  x:Name="btCreate" Clicked="BtCreate_OnClicked"  FontSize="18" CornerRadius="10" Margin="20" Text="Create Rule" HeightRequest="50" TextColor="White" BackgroundColor="#776CE6" VerticalOptions="Start" HorizontalOptions="Start"></Button>
+             <inputLayout:SfTextInputLayout Grid.Column="1" Hint="Role Name"  Margin="10" Padding="5,0,0,0"  Grid.Row="0"  x:Name="etRoleName" ContainerType="Outlined" Stroke="#776CE6" OutlineCornerRadius="8" VerticalOptions="Start" HorizontalOptions="End">
+                 <inputLayout:SfTextInputLayout.HintLabelStyle>
+                     <inputLayout:LabelStyle TextColor="Gray" FontSize="18"/>
+                 </inputLayout:SfTextInputLayout.HintLabelStyle>
+                 <Entry x:Name="entryRoleName" TextChanged="EntryRoleName_OnTextChanged" />
+             </inputLayout:SfTextInputLayout>
+         </Grid>
+
+         
+        <Border Grid.Row="2" HorizontalOptions="Fill"
+                Margin="5" BackgroundColor="Transparent"
+                VerticalOptions="Fill"
+                StrokeShape= "RoundRectangle 20"
+                StrokeThickness="0.5"
+                Stroke= "{AppThemeBinding Dark=White,Light=Black}">
+
+
+            <CollectionView x:Name="roleslist" Margin="20,10,20,0" BackgroundColor="Transparent">
+                 <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical"
+                                           ItemSpacing="20">
+                        </LinearItemsLayout>
+                 </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <ContentView>
+                           
+                            <Grid ColumnDefinitions="*,50,50" Padding="10" ColumnSpacing="10">
+                                
+                                <Border Grid.Column="0" HeightRequest="50" BackgroundColor="Transparent" StrokeThickness="1"
+                                        Padding="10,0" StrokeShape="RoundRectangle 10" Stroke= "#776CE6">
+                                    <Label 
+                                        Text="{Binding Name}"
+                                        BackgroundColor="Transparent"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Start"/>
+                                 </Border>
+                                <Button Grid.Column="1" HorizontalOptions="End"
+                                        Text="{x:Static icon:IconFont.Edit}"
+                                        Style="{x:StaticResource GoogleFont }"
+                                        TextColor="#776CE6" CornerRadius="10"
+                                        BackgroundColor="Transparent"
+                                        BorderWidth="1" IsEnabled="{Binding IsEnabledEdit}"
+                                        BorderColor="#776CE6"
+                                        x:Name="btnEdite"
+                                        CommandParameter="{Binding Id}" Clicked="BtnEdite_OnClicked"/>
+                                <Button Grid.Column="3" HorizontalOptions="End"
+                                        Text="{x:Static icon:IconFont.Delete}"
+                                        Style="{x:StaticResource GoogleFont }"
+                                        TextColor="OrangeRed"
+                                        BackgroundColor="Transparent"
+                                        BorderWidth="1" IsEnabled="{Binding IsEnabledDelete}"
+                                        BorderColor="OrangeRed" CornerRadius="10"
+                                        x:Name="btnDelete"
+                                        CommandParameter="{Binding Id}" Clicked="BtnDelete_OnClicked"/>
+                            </Grid>
+                        </ContentView>
+                        
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Border>
+    </Grid>
+    
+    
+    
+    
+</ContentPage>

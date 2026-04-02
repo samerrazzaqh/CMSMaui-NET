@@ -1,0 +1,10 @@
+<api type="debug" assembly-name="CMSBlazor.Client" mvid="234ec97b79e44c3b8d0669dc170a842d">
+  <java-to-managed>
+    <entry java-name="crc6445d323b3b2f94124/MainActivity" managed-name="CMSBlazor.Client.MainActivity, CMSBlazor.Client" managed-type-token-id="33554494" />
+    <entry java-name="crc6445d323b3b2f94124/MainApplication" managed-name="CMSBlazor.Client.MainApplication, CMSBlazor.Client" managed-type-token-id="33554495" />
+  </java-to-managed>
+  <managed-to-java>
+    <entry java-name="crc6445d323b3b2f94124/MainActivity" managed-name="CMSBlazor.Client.MainActivity, CMSBlazor.Client" managed-type-token-id="33554494" />
+    <entry java-name="crc6445d323b3b2f94124/MainApplication" managed-name="CMSBlazor.Client.MainApplication, CMSBlazor.Client" managed-type-token-id="33554495" />
+  </managed-to-java>
+</api>

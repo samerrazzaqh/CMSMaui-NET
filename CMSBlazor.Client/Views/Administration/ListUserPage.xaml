@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CMSBlazor.Client.Views.Administration.ListUserPage"
+             xmlns:icon="clr-namespace:CMSBlazor.Client.Utilities"
+             BackgroundColor="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}"
+             Shell.TabBarIsVisible="False"
+             Title="Users">
+
+
+    <Grid RowDefinitions="1,*,Auto">
+
+        <BoxView Grid.Row="0" BackgroundColor="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}">
+            <BoxView.Shadow>
+                 <Shadow Brush="{AppThemeBinding Dark=White,Light=Black}" Offset="0,0" Radius="5" Opacity="0.5" />
+            </BoxView.Shadow>
+        </BoxView>
+
+        <Border Grid.Row="1" HorizontalOptions="Fill"
+                Margin="5" BackgroundColor="Transparent"
+                VerticalOptions="Fill"
+                StrokeShape= "RoundRectangle 20"
+                StrokeThickness="0.5"
+                Stroke= "{AppThemeBinding Dark=White,Light=Black}">
+
+
+            <CollectionView x:Name="usreslist" Margin="20,10,20,0" BackgroundColor="Transparent">
+                 <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical"
+                                           ItemSpacing="10">
+                        </LinearItemsLayout>
+                 </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <ContentView>
+                           
+                            <Grid ColumnDefinitions="*,50,50" Padding="10" ColumnSpacing="10">
+                                
+                                <Border Grid.Column="0" HeightRequest="50" BackgroundColor="Transparent" StrokeThickness="1"
+                                        Padding="10,0" StrokeShape="RoundRectangle 10" Stroke= "#776CE6">
+                                    <Label 
+                                        Text="{Binding Email}"
+                                        BackgroundColor="Transparent"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Start"/>
+                                 </Border>
+                                <Button Grid.Column="1" HorizontalOptions="End"
+                                        Text="{x:Static icon:IconFont.Edit}"
+                                        Style="{x:StaticResource GoogleFont }"
+                                        TextColor="#776CE6" CornerRadius="10"
+                                        BackgroundColor="Transparent"
+                                        BorderWidth="1" IsEnabled="{Binding IsEnabledEdit}"
+                                        BorderColor="#776CE6"
+                                        x:Name="btnSettings"
+                                        CommandParameter="{Binding Id}" Clicked="btnSettings_Clicked"/>
+                                <Button Grid.Column="3" HorizontalOptions="End"
+                                        Text="{x:Static icon:IconFont.Delete}"
+                                        Style="{x:StaticResource GoogleFont }"
+                                        TextColor="OrangeRed"
+                                        BackgroundColor="Transparent"
+                                        BorderWidth="1" IsEnabled="{Binding IsEnabledDelete}"
+                                        BorderColor="OrangeRed" CornerRadius="10"
+                                        x:Name="btnDelete"
+                                        CommandParameter="{Binding Id}" Clicked="BtnDelete_OnClicked"/>
+                            </Grid>
+                        </ContentView>
+                        
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Border>
+    </Grid>
+
+    
+   
+    
+</ContentPage>

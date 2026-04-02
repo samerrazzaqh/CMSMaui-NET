@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:buttons="clr-namespace:Syncfusion.Maui.Toolkit.Buttons;assembly=Syncfusion.Maui.Toolkit"
+             xmlns:syncfusion="clr-namespace:Syncfusion.Maui.Toolkit.Expander;assembly=Syncfusion.Maui.Toolkit"
+             xmlns:icon="clr-namespace:CMSBlazor.Client.Utilities"
+             x:Class="CMSBlazor.Client.Views.Home.MenuPage">
+    
+    
+    
+    
+     <ScrollView>
+            <Grid RowDefinitions="100,1,Auto,Auto,*">
+            
+               <!-- Profile -->
+                <Border Grid.Row="0"  BackgroundColor="Transparent" StrokeThickness="0" Margin="10,10" StrokeShape="RoundRectangle 10" Stroke= "#776CE6">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="borProfile" Tapped="borProfile_Tapped"/>
+                    </Border.GestureRecognizers>
+                    <Grid ColumnDefinitions="*,auto" ColumnSpacing="10" HorizontalOptions="Start">
+                        <toolkit:AvatarView x:Name="imgProfile" Grid.Column="0" BorderColor="#776CE6" BorderWidth="0" HeightRequest="50" WidthRequest="50" CornerRadius="50"/>
+                        <Label Grid.Column="1" FontAttributes="Bold" x:Name="lbNameProfile" FontSize="Header"  HorizontalOptions="Center" VerticalOptions="Center"/>
+                    </Grid>
+                </Border>
+                 <BoxView Grid.Row="1" BackgroundColor="Gray"/>
+               <!-- SfExpander -->
+            <StackLayout x:Name="stSettings" Grid.Row="2"  Margin="10,10" >
+                 <Border  Stroke="#CAC4D0" StrokeShape="RoundRectangle 8"  StrokeThickness="1">
+                  <syncfusion:SfExpander  HeaderIconColor="{AppThemeBinding Dark=White,Default=Black}" HeaderBackground="Gray" x:Name="expander1" IsExpanded="False" >
+                      <syncfusion:SfExpander.Header>
+                            <Grid ColumnDefinitions="auto,*" HeightRequest="50" Padding="10,0,0,0" ColumnSpacing="10">
+                               <Label Grid.Column="0" Text="{x:Static icon:IconFont.Settings}" Style="{x:StaticResource GoogleFont }" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Start" TextColor="{AppThemeBinding Dark=White,Default=Black}"/>
+                               <Label Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start" FontSize="18" TextColor="{AppThemeBinding Dark=White,Default=Black}" Text="Settings" />
+                            </Grid>
+                      </syncfusion:SfExpander.Header>
+                   
+                    <syncfusion:SfExpander.Content>
+                          <Grid RowDefinitions="70,70,70,70"  >
+                             <!-- Users -->
+                             <Border Grid.Row="0" BackgroundColor="#776CE6" StrokeThickness="1" Margin="10,10" StrokeShape="RoundRectangle 10" Stroke= "#776CE6">
+                                <Border.GestureRecognizers>
+                                   <TapGestureRecognizer x:Name="borUsers" Tapped="borUsers_Tapped"/>
+                                </Border.GestureRecognizers>
+                                <Grid ColumnDefinitions="auto,*" Padding="10,0,0,0" ColumnSpacing="10">
+                                   <Label Grid.Column="0" Text="{x:Static icon:IconFont.Person}" Style="{x:StaticResource GoogleFont }" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Start" TextColor="{AppThemeBinding Dark=White,Default=Black}"/>
+                                   <Label Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start" FontSize="18" TextColor="{AppThemeBinding Dark=White,Default=Black}" Text="Users" />
+                                </Grid>
+                             </Border>
+                             <!-- Roles -->
+                             <Border Grid.Row="1" BackgroundColor="#776CE6" StrokeThickness="1" Margin="10,10" StrokeShape="RoundRectangle 10" Stroke= "#776CE6">
+                                <Border.GestureRecognizers>
+                                   <TapGestureRecognizer x:Name="borRoles" Tapped="borRoles_Tapped"/>
+                                </Border.GestureRecognizers>
+                                <Grid ColumnDefinitions="auto,*" Padding="10,0,0,0" ColumnSpacing="10">
+                                   <Label Grid.Column="0" Text="{x:Static icon:IconFont.Design_services}" Style="{x:StaticResource GoogleFont }" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Start" TextColor="{AppThemeBinding Dark=White,Default=Black}"/>
+                                   <Label Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start" FontSize="18" TextColor="{AppThemeBinding Dark=White,Default=Black}" Text="Roles" />
+                                </Grid>
+                             </Border>
+                             <!-- Posts -->
+                             <Border Grid.Row="2" BackgroundColor="#776CE6" StrokeThickness="1" Margin="10,10" StrokeShape="RoundRectangle 10" Stroke= "#776CE6">
+                                <Border.GestureRecognizers>
+                                   <TapGestureRecognizer x:Name="borPosts" Tapped="borPosts_Tapped"/>
+                                </Border.GestureRecognizers>
+                                <Grid ColumnDefinitions="auto,*" Padding="10,0,0,0" ColumnSpacing="10">
+                                   <Label Grid.Column="0" Text="{x:Static icon:IconFont.List}" Style="{x:StaticResource GoogleFont }" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Start" TextColor="{AppThemeBinding Dark=White,Default=Black}"/>
+                                   <Label Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start" FontSize="18" TextColor="{AppThemeBinding Dark=White,Default=Black}" Text="Posts" />
+                                </Grid>
+                             </Border>
+                             <!-- Category -->
+                             <Border Grid.Row="3" BackgroundColor="#776CE6" StrokeThickness="1" Margin="10,10" StrokeShape="RoundRectangle 10" Stroke= "#776CE6">
+                                <Border.GestureRecognizers>
+                                   <TapGestureRecognizer x:Name="borCategory" Tapped="borCategory_Tapped"/>
+                                </Border.GestureRecognizers>
+                                <Grid ColumnDefinitions="auto,*" Padding="10,0,0,0" ColumnSpacing="10">
+                                   <Label Grid.Column="0" Text="{x:Static icon:IconFont.Category}" Style="{x:StaticResource GoogleFont }" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Start" TextColor="{AppThemeBinding Dark=White,Default=Black}"/>
+                                   <Label Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start" FontSize="18" TextColor="{AppThemeBinding Dark=White,Default=Black}" Text="Category" />
+                                </Grid>
+                             </Border>
+                          </Grid>
+                    </syncfusion:SfExpander.Content>
+                  </syncfusion:SfExpander>
+              </Border>
+            </StackLayout>
+            
+               <!-- Category -->
+            <StackLayout Grid.Row="3"  Margin="10,10" >
+                 <Border  Stroke="#CAC4D0" StrokeShape="RoundRectangle 8"  StrokeThickness="1">
+                  <syncfusion:SfExpander Expanded="Expander2_OnExpanded" HeaderIconColor="{AppThemeBinding Dark=White,Default=Black}" HeaderBackground="Gray" x:Name="expander2" IsExpanded="False" >
+                      <syncfusion:SfExpander.Header>
+                            <Grid ColumnDefinitions="auto,*" HeightRequest="50" Padding="10,0,0,0" ColumnSpacing="10">
+                               <Label Grid.Column="0" Text="{x:Static icon:IconFont.Category}" Style="{x:StaticResource GoogleFont }" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Start" TextColor="{AppThemeBinding Dark=White,Default=Black}"/>
+                               <Label Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start" FontSize="18" TextColor="{AppThemeBinding Dark=White,Default=Black}" Text="Category" />
+                            </Grid>
+                      </syncfusion:SfExpander.Header>
+                   
+                    <syncfusion:SfExpander.Content>
+                          <CollectionView x:Name="categorylist" Margin="10,10" BackgroundColor="Transparent">
+                             <CollectionView.ItemsLayout>
+                                <LinearItemsLayout Orientation="Vertical"
+                                                   ItemSpacing="20">
+                                </LinearItemsLayout>
+                             </CollectionView.ItemsLayout>
+                             <CollectionView.ItemTemplate>
+                                <DataTemplate>
+                                   <ContentView>
+                                      <Button CommandParameter="{Binding CategoryId}" FlowDirection="RightToLeft" FontSize="18" TextColor="White" x:Name="butCategoryId" Clicked="ButCategoryId_OnClicked" Text="{Binding CatName}" HeightRequest="50" BackgroundColor="#776CE6" CornerRadius="10">
+                                      </Button>
+                                   </ContentView>
+                        
+                                </DataTemplate>
+                             </CollectionView.ItemTemplate>
+                          </CollectionView>
+                     
+                     
+                    </syncfusion:SfExpander.Content>
+                  </syncfusion:SfExpander>
+              </Border>
+            </StackLayout>   
+            
+            
+            
+          
+            <!-- Logout -->
+            <Border Grid.Row="4" HeightRequest="48" BackgroundColor="Gray" StrokeThickness="1"
+                    Margin="10,10" VerticalOptions="End" HorizontalOptions="Fill"  StrokeShape="RoundRectangle 10" Stroke= "Gray">
+               <Border.GestureRecognizers>
+                  <TapGestureRecognizer x:Name="borLogout" Tapped="BorLogout_OnTapped"/>
+               </Border.GestureRecognizers>
+               <Grid ColumnDefinitions="auto,*" Padding="10,0,0,0" ColumnSpacing="10">
+                  <Label Grid.Column="0"
+                         Text="{x:Static icon:IconFont.Logout}" Style="{x:StaticResource GoogleFont }" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Start" TextColor="{AppThemeBinding Dark=White,Default=Black}"/>
+                  <Label Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start" FontSize="18" TextColor="{AppThemeBinding Dark=White,Default=Black}" Text="Logout" />
+               </Grid>
+            </Border>
+     
+     
+        </Grid>
+     </ScrollView>
+     
+     
+     
+   
+   
+</ContentView>

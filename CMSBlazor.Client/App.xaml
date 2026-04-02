@@ -1,0 +1,31 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CMSBlazor.Client"
+             x:Class="CMSBlazor.Client.App">
+    <Application.Resources>
+        <ResourceDictionary>
+
+            <!--<ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
+                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>-->
+
+              <!--Customize google fone-->
+            <Style TargetType="Label"  x:Key="GoogleFont">
+                <Setter Property="FontFamily" Value="GoogleMaterialFont"></Setter>
+                <Setter Property="FontSize" Value="24"></Setter>
+            </Style>
+                <!--================-->
+            
+            <!-- Styles NavigationPage -->
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}"/>
+                <Setter Property="BarTextColor" Value="{AppThemeBinding Dark=White,Light=Black}"/>
+            </Style>
+            <!-- Styles -->
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
+

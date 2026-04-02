@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:icon="clr-namespace:CMSBlazor.Client.Utilities"
+             x:Class="CMSBlazor.Client.Views.Administration.ManageUserClaims">
+    
+    
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}"
+                                   StatusBarStyle="Default"/>
+    </ContentPage.Behaviors>
+    
+    <NavigationPage.TitleView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Edite Claims" Grid.Column="0"  FontSize="18" VerticalOptions="Center" HorizontalOptions="Start"></Label>
+
+            <StackLayout Grid.Column="1" HorizontalOptions="EndAndExpand" Orientation="Horizontal" Margin="0,5,5,5">
+                <Button HorizontalOptions="End" Clicked="BtnClose_OnClicked" Text="{x:Static icon:IconFont.Close}" Style="{x:StaticResource GoogleFont }" TextColor="#776CE6" BackgroundColor="Transparent" BorderWidth="1" BorderColor="Transparent" x:Name="btnClose"/>
+            </StackLayout>
+        </Grid>
+    </NavigationPage.TitleView>
+    
+    <!-- ======================== -->
+    
+    
+    
+    <ScrollView>
+        <StackLayout>
+            <Border HeightRequest="60" BackgroundColor="#776CE6" StrokeThickness="0" Margin="10,10" StrokeShape="RoundRectangle 10" Stroke= "#776CE6">
+                <Grid ColumnDefinitions="auto" ColumnSpacing="10" HorizontalOptions="Center">
+                    <Label Grid.Column="0" FontAttributes="Bold" x:Name="lbEmail" FontSize="25"  HorizontalOptions="Center" VerticalOptions="Center"/>
+                </Grid>
+            </Border>
+
+             <CollectionView x:Name="userClaimslist" Margin="20,10,20,0" BackgroundColor="Transparent">
+                 <CollectionView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Vertical"
+                                           ItemSpacing="20">
+                        </LinearItemsLayout>
+                 </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <ContentView>
+                            <Border HeightRequest="50" BackgroundColor="Transparent" StrokeThickness="1"
+                                    Margin="10,10" StrokeShape="RoundRectangle 10" Stroke= "#776CE6">
+                                  <Grid ColumnDefinitions="auto,*" Padding="10,0,10,0" ColumnSpacing="10">
+                                     <Label Grid.Column="0" Text="{Binding ClaimType}" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Start"/>
+                                      <CheckBox Grid.Column="1"   IsChecked="{Binding IsSelected}"  HorizontalOptions="End" Color="#776CE6"></CheckBox>
+                                </Grid>
+                             </Border>
+                        </ContentView>
+                        
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            
+            <Button x:Name="btSubmit" Clicked="BtSubmit_OnClicked"  WidthRequest="150" FontSize="18" CornerRadius="10" Margin="20" Text="Submit" HeightRequest="50" TextColor="White" BackgroundColor="#776CE6" VerticalOptions="Start" HorizontalOptions="Start"></Button>
+            
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

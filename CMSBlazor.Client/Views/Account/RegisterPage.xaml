@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CMSBlazor.Client.Views.Account.RegisterPage"
+             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Toolkit.TextInputLayout;assembly=Syncfusion.Maui.Toolkit"
+             Title=" "
+             BackgroundColor="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}">
+
+
+     <Grid RowDefinitions="1,*">
+
+        <BoxView Grid.Row="0" BackgroundColor="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}">
+            <BoxView.Shadow>
+                 <Shadow Brush="{AppThemeBinding Dark=White,Light=Black}" Offset="0,0" Radius="5" Opacity="0.5" />
+            </BoxView.Shadow>
+        </BoxView>
+
+         <ScrollView Grid.Row="1">
+            <Grid RowDefinitions="Auto,*" RowSpacing="10">
+                <Border StrokeShape= "RoundRectangle 10" StrokeThickness="0" Padding="20" Margin="2" BackgroundColor="#776CE6" VerticalOptions="Start" HorizontalOptions="Fill" Grid.Row="0">
+                     <Border.Shadow>
+                        <Shadow Brush="Black" Radius="10" Opacity="0.5" />
+                    </Border.Shadow>
+                     <Label TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" FontSize="Header" Text="Register"/>
+                </Border>
+
+                
+
+                <Border BackgroundColor="Transparent" Grid.Row="1" StrokeShape= "RoundRectangle 10"  StrokeThickness="0.5" Margin="20,0" Padding="15" VerticalOptions="Center" HorizontalOptions="Fill">
+                    <Border.Stroke>
+                          <LinearGradientBrush EndPoint="0,1">
+                                <GradientStop Color="#776CE6" Offset="0.1" />
+                                <GradientStop Color="#776CE6" Offset="1.0" />
+                          </LinearGradientBrush>
+                    </Border.Stroke>
+                   <Grid RowDefinitions="*,*,*,*,*,*,*,*" RowSpacing="10" Padding="10">
+                       
+                       <inputLayout:SfTextInputLayout Hint="FirstName"  Padding="5,0,0,0"  Grid.Row="0"  x:Name="etFirstName" ContainerType="Outlined" Stroke="#776CE6" OutlineCornerRadius="8">
+                           <inputLayout:SfTextInputLayout.HintLabelStyle>
+                               <inputLayout:LabelStyle TextColor="Gray"/>
+                           </inputLayout:SfTextInputLayout.HintLabelStyle>
+                           <Entry x:Name="entryFirstName" TextChanged="EntryFirstName_OnTextChanged" />
+                       </inputLayout:SfTextInputLayout>
+
+                       <inputLayout:SfTextInputLayout Hint="LastName"  Padding="5,0,0,0"  Grid.Row="1"  x:Name="etLastName" ContainerType="Outlined" Stroke="#776CE6" OutlineCornerRadius="8">
+                           <inputLayout:SfTextInputLayout.HintLabelStyle>
+                               <inputLayout:LabelStyle TextColor="Gray"/>
+                           </inputLayout:SfTextInputLayout.HintLabelStyle>
+                           <Entry x:Name="entryLastName" TextChanged="EntryLastName_OnTextChanged" />
+                       </inputLayout:SfTextInputLayout>
+                       
+                       <inputLayout:SfTextInputLayout Hint="Email"  Padding="5,0,0,0"  Grid.Row="2"  x:Name="etEmail" ContainerType="Outlined" Stroke="#776CE6" OutlineCornerRadius="8">
+                           <inputLayout:SfTextInputLayout.HintLabelStyle>
+                               <inputLayout:LabelStyle TextColor="Gray"/>
+                           </inputLayout:SfTextInputLayout.HintLabelStyle>
+                           <Entry x:Name="entryEmail" TextChanged="EntryEmail_OnTextChanged" />
+                       </inputLayout:SfTextInputLayout>
+                       
+                       <inputLayout:SfTextInputLayout Hint="UserName"  Padding="5,0,0,0"  Grid.Row="3"  x:Name="etUserName" ContainerType="Outlined" Stroke="#776CE6" OutlineCornerRadius="8">
+                           <inputLayout:SfTextInputLayout.HintLabelStyle>
+                               <inputLayout:LabelStyle TextColor="Gray"/>
+                           </inputLayout:SfTextInputLayout.HintLabelStyle>
+                           <Entry x:Name="entryUserName" TextChanged="EntryUserName_OnTextChanged" />
+                       </inputLayout:SfTextInputLayout>
+                       
+                       <inputLayout:SfTextInputLayout Hint="Password"  x:Name="etPassword" Padding="5,0,0,0" Grid.Row="4" EnablePasswordVisibilityToggle="True" ContainerType="Outlined" Stroke="#776CE6" OutlineCornerRadius="8">
+                           <inputLayout:SfTextInputLayout.HintLabelStyle>
+                               <inputLayout:LabelStyle TextColor="Gray"/>
+                           </inputLayout:SfTextInputLayout.HintLabelStyle>
+                           <Entry x:Name="entryPassword" TextChanged="EntryPassword_OnTextChanged" />
+                       </inputLayout:SfTextInputLayout>
+                       
+                       <inputLayout:SfTextInputLayout Hint="RePassword"  x:Name="etRePassword" Padding="5,0,0,0" Grid.Row="5" EnablePasswordVisibilityToggle="True" ContainerType="Outlined" Stroke="#776CE6" OutlineCornerRadius="8">
+                           <inputLayout:SfTextInputLayout.HintLabelStyle>
+                               <inputLayout:LabelStyle TextColor="Gray"/>
+                           </inputLayout:SfTextInputLayout.HintLabelStyle>
+                           <Entry x:Name="entryRePassword"  TextChanged="EntryRePassword_OnTextChanged"/>
+                       </inputLayout:SfTextInputLayout>
+
+                       <Grid Grid.Row="6" ColumnDefinitions="*">
+                          <Button Grid.Column="0" Clicked="btnRegister_Clicked" x:Name="btnRegister" Text="Register" BackgroundColor="#776CE6"
+                                   TextColor="White" CornerRadius="10" HorizontalOptions="Start" HeightRequest="40" WidthRequest="100"/>
+
+                            <Border x:Name="IndicatorBorder" IsVisible="False" HeightRequest="40" WidthRequest="100"
+                                StrokeShape= "RoundRectangle 10" StrokeThickness="0"
+                                BackgroundColor="#776CE6" VerticalOptions="Start"
+                                HorizontalOptions="Start" Grid.Column="0">
+                                <ActivityIndicator BackgroundColor="Transparent" Color="White" IsRunning="True" />
+                            </Border>
+                       </Grid>
+
+                   </Grid>
+
+                
+
+                </Border>
+
+
+            </Grid>
+         </ScrollView>
+
+     </Grid>
+
+
+    
+
+
+
+</ContentPage>

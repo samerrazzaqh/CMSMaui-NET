@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:buttons="clr-namespace:Syncfusion.Maui.Toolkit.Buttons;assembly=Syncfusion.Maui.Toolkit"
+    x:Class="CMSBlazor.Client.Views.HomeShell"
+    xmlns:pages="clr-namespace:CMSBlazor.Client.Views.Home"
+    Shell.BackgroundColor="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}"
+    Shell.ForegroundColor="{AppThemeBinding Dark=White,Light=Black}"
+    Shell.TitleColor="{AppThemeBinding Dark=White,Light=Black}"
+    Shell.TabBarIsVisible="False"
+    Shell.TabBarTitleColor="#776CE6"
+    Shell.TabBarForegroundColor="#776CE6"
+    xmlns:icon="clr-namespace:CMSBlazor.Client.Utilities"
+    Shell.NavBarHasShadow="False">
+    <!-- FlyoutBackground="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}" -->
+    <!-- Shell.FlyoutBehavior="Flyout" -->
+    <!-- FlowDirection="MatchParent" -->
+
+    
+    
+    <!-- <Shell.Behaviors> -->
+    <!--     <toolkit:StatusBarBehavior StatusBarColor="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}" -->
+    <!--                                StatusBarStyle="{AppThemeBinding Dark=LightContent,Light=DarkContent}"/> -->
+    <!-- </Shell.Behaviors> -->
+
+    <ShellContent ContentTemplate="{DataTemplate pages:HomePage}"
+                  Route="HomePage" />
+    <!-- <TabBar> -->
+    <!--      <Tab Title="Home" Icon="home"> -->
+    <!--          <ShellContent ContentTemplate="{DataTemplate pages:HomePage}" -->
+    <!--                 Route="HomePage" /> -->
+    <!--        -->
+    <!--      </Tab> -->
+    <!-- -->
+    <!--       <Tab Title="Menu" Icon="menu"> -->
+    <!--          <ShellContent ContentTemplate="{DataTemplate pages:HomePage}" -->
+    <!--                 Route="HomePage"/> -->
+    <!--      </Tab> -->
+    <!--      <Tab Title="Menu" Icon="menu"> -->
+    <!--          <ShellContent ContentTemplate="{DataTemplate pages:HomePage}" -->
+    <!--                 Route="HomePage"/> -->
+    <!--      </Tab> -->
+    <!--      <Tab Title="Menu" Icon="menu"> -->
+    <!--          <ShellContent ContentTemplate="{DataTemplate pages:HomePage}" -->
+    <!--                 Route="HomePage"/> -->
+    <!--      </Tab> -->
+    <!-- </TabBar> -->
+
+
+
+
+
+
+          <!--===================FlyoutHeader FlyoutFooter===============================================-->
+   
+   
+    <!-- <Shell.FlyoutContent> -->
+    <!--     <ScrollView> -->
+    <!--         <Grid RowDefinitions="100,1,70,70,70,70,*"> -->
+    <!-- -->
+    <!--            ~1~ Profile @1@ -->
+    <!--             <Border Grid.Row="0"  BackgroundColor="Transparent" StrokeThickness="0" Margin="10,10" StrokeShape="RoundRectangle 10" Stroke= "#776CE6"> -->
+    <!--                 <Border.GestureRecognizers> -->
+    <!--                     <TapGestureRecognizer x:Name="borProfile" Tapped="borProfile_Tapped"/> -->
+    <!--                 </Border.GestureRecognizers> -->
+    <!--                 <Grid ColumnDefinitions="*,auto" ColumnSpacing="10" HorizontalOptions="Start"> -->
+    <!--                     <toolkit:AvatarView Grid.Column="0" BorderColor="#776CE6" BorderWidth="0" HeightRequest="50" WidthRequest="50" CornerRadius="50" ImageSource="image3"/> -->
+    <!--                     <Label Grid.Column="1" FontAttributes="Bold" FontSize="Header" Text="samerrazzaqh@gmail.com" HorizontalOptions="Center" VerticalOptions="Center"/> -->
+    <!--                 </Grid> -->
+    <!--             </Border> -->
+    <!--              <BoxView Grid.Row="1" BackgroundColor="Gray"/> -->
+    <!-- -->
+    <!--              ~1~ Users @1@ -->
+    <!--              <Border Grid.Row="2" BackgroundColor="Transparent" StrokeThickness="1" Margin="10,10" StrokeShape="RoundRectangle 10" Stroke= "#776CE6"> -->
+    <!--                  <Border.GestureRecognizers> -->
+    <!--                     <TapGestureRecognizer x:Name="borUsers" Tapped="borUsers_Tapped"/> -->
+    <!--                  </Border.GestureRecognizers> -->
+    <!--                   <Grid ColumnDefinitions="auto,*" Padding="10,0,0,0" ColumnSpacing="10"> -->
+    <!--                      <Label Grid.Column="0" Text="{x:Static icon:IconFont.Person}" Style="{x:StaticResource GoogleFont }" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Start" TextColor="{AppThemeBinding Dark=White,Default=Black}"/> -->
+    <!--                      <Label Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start" FontSize="18" TextColor="{AppThemeBinding Dark=White,Default=Black}" Text="Users" /> -->
+    <!--                 </Grid> -->
+    <!--              </Border> -->
+    <!--              ~1~ Roles @1@ -->
+    <!--             <Border Grid.Row="3" BackgroundColor="Transparent" StrokeThickness="1" Margin="10,10" StrokeShape="RoundRectangle 10" Stroke= "#776CE6"> -->
+    <!--                  <Border.GestureRecognizers> -->
+    <!--                     <TapGestureRecognizer x:Name="borRoles" Tapped="borRoles_Tapped"/> -->
+    <!--                  </Border.GestureRecognizers> -->
+    <!--                   <Grid ColumnDefinitions="auto,*" Padding="10,0,0,0" ColumnSpacing="10"> -->
+    <!--                      <Label Grid.Column="0" Text="{x:Static icon:IconFont.Design_services}" Style="{x:StaticResource GoogleFont }" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Start" TextColor="{AppThemeBinding Dark=White,Default=Black}"/> -->
+    <!--                      <Label Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start" FontSize="18" TextColor="{AppThemeBinding Dark=White,Default=Black}" Text="Roles" /> -->
+    <!--                 </Grid> -->
+    <!--              </Border> -->
+    <!--              ~1~ Posts @1@ -->
+    <!--             <Border Grid.Row="4" BackgroundColor="Transparent" StrokeThickness="1" Margin="10,10" StrokeShape="RoundRectangle 10" Stroke= "#776CE6"> -->
+    <!--                  <Border.GestureRecognizers> -->
+    <!--                     <TapGestureRecognizer x:Name="borPosts" Tapped="borPosts_Tapped"/> -->
+    <!--                  </Border.GestureRecognizers> -->
+    <!--                   <Grid ColumnDefinitions="auto,*" Padding="10,0,0,0" ColumnSpacing="10"> -->
+    <!--                      <Label Grid.Column="0" Text="{x:Static icon:IconFont.List}" Style="{x:StaticResource GoogleFont }" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Start" TextColor="{AppThemeBinding Dark=White,Default=Black}"/> -->
+    <!--                      <Label Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start" FontSize="18" TextColor="{AppThemeBinding Dark=White,Default=Black}" Text="Posts" /> -->
+    <!--                 </Grid> -->
+    <!--              </Border> -->
+    <!--              ~1~ Category @1@ -->
+    <!--             <Border Grid.Row="5" BackgroundColor="Transparent" StrokeThickness="1" Margin="10,10" StrokeShape="RoundRectangle 10" Stroke= "#776CE6"> -->
+    <!--                  <Border.GestureRecognizers> -->
+    <!--                     <TapGestureRecognizer x:Name="borCategory" Tapped="borCategory_Tapped"/> -->
+    <!--                  </Border.GestureRecognizers> -->
+    <!--                   <Grid ColumnDefinitions="auto,*" Padding="10,0,0,0" ColumnSpacing="10"> -->
+    <!--                      <Label Grid.Column="0" Text="{x:Static icon:IconFont.Category}" Style="{x:StaticResource GoogleFont }" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Start" TextColor="{AppThemeBinding Dark=White,Default=Black}"/> -->
+    <!--                      <Label Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start" FontSize="18" TextColor="{AppThemeBinding Dark=White,Default=Black}" Text="Category" /> -->
+    <!--                 </Grid> -->
+    <!--              </Border> -->
+    <!--              ~1~ Logout @1@ -->
+    <!--              <Border Grid.Row="6" HeightRequest="50" BackgroundColor="Transparent" StrokeThickness="1" -->
+    <!--                      Margin="10,10" VerticalOptions="End" HorizontalOptions="Fill"  StrokeShape="RoundRectangle 10" Stroke= "#776CE6"> -->
+    <!--                 <Border.GestureRecognizers> -->
+    <!--                    <TapGestureRecognizer x:Name="borLogout" Tapped="BorLogout_OnTapped"/> -->
+    <!--                 </Border.GestureRecognizers> -->
+    <!--                 <Grid ColumnDefinitions="auto,*" Padding="10,0,0,0" ColumnSpacing="10"> -->
+    <!--                    <Label Grid.Column="0" -->
+    <!--                           Text="{x:Static icon:IconFont.Logout}" Style="{x:StaticResource GoogleFont }" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Start" TextColor="{AppThemeBinding Dark=White,Default=Black}"/> -->
+    <!--                    <Label Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start" FontSize="18" TextColor="{AppThemeBinding Dark=White,Default=Black}" Text="Logout" /> -->
+    <!--                 </Grid> -->
+    <!--              </Border> -->
+    <!-- -->
+    <!-- -->
+    <!--         </Grid> -->
+    <!-- -->
+    <!-- -->
+    <!--     </ScrollView> -->
+    <!-- </Shell.FlyoutContent> -->
+
+
+
+   
+
+
+
+
+
+     <!--==================================================================-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</Shell>

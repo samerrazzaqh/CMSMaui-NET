@@ -1,0 +1,22 @@
+<api type="debug" assembly-name="The49.Maui.BottomSheet" mvid="a1bdb3d1e3a04f20b49d4b3fb70ea78e">
+  <java-to-managed>
+    <entry java-name="crc64ec3c54a6f007a048/BottomSheetBackdrop" managed-name="The49.Maui.BottomSheet.BottomSheetBackdrop, The49.Maui.BottomSheet" managed-type-token-id="33554449" />
+    <entry java-name="crc64ec3c54a6f007a048/BottomSheetCallback" managed-name="The49.Maui.BottomSheet.BottomSheetCallback, The49.Maui.BottomSheet" managed-type-token-id="33554450" />
+    <entry java-name="crc64ec3c54a6f007a048/BottomSheetContainer" managed-name="The49.Maui.BottomSheet.BottomSheetContainer, The49.Maui.BottomSheet" managed-type-token-id="33554451" />
+    <entry java-name="crc64ec3c54a6f007a048/BottomSheetController_EdgeToEdgeCallback" managed-name="The49.Maui.BottomSheet.BottomSheetController+EdgeToEdgeCallback, The49.Maui.BottomSheet" managed-type-token-id="33554462" />
+    <entry java-name="crc64ec3c54a6f007a048/BottomSheetController_EdgeToEdgeListener" managed-name="The49.Maui.BottomSheet.BottomSheetController+EdgeToEdgeListener, The49.Maui.BottomSheet" managed-type-token-id="33554463" />
+    <entry java-name="crc64ec3c54a6f007a048/BottomSheetController_BottomSheetInsetsAnimationCallback" managed-name="The49.Maui.BottomSheet.BottomSheetController+BottomSheetInsetsAnimationCallback, The49.Maui.BottomSheet" managed-type-token-id="33554464" />
+    <entry java-name="crc64ec3c54a6f007a048/SheetRadiusDrawable" managed-name="The49.Maui.BottomSheet.SheetRadiusDrawable, The49.Maui.BottomSheet" managed-type-token-id="33554453" />
+    <entry java-name="crc64ec3c54a6f007a048/StayOnFrontView" managed-name="The49.Maui.BottomSheet.StayOnFrontView, The49.Maui.BottomSheet" managed-type-token-id="33554454" />
+  </java-to-managed>
+  <managed-to-java>
+    <entry java-name="crc64ec3c54a6f007a048/BottomSheetBackdrop" managed-name="The49.Maui.BottomSheet.BottomSheetBackdrop, The49.Maui.BottomSheet" managed-type-token-id="33554449" />
+    <entry java-name="crc64ec3c54a6f007a048/BottomSheetCallback" managed-name="The49.Maui.BottomSheet.BottomSheetCallback, The49.Maui.BottomSheet" managed-type-token-id="33554450" />
+    <entry java-name="crc64ec3c54a6f007a048/BottomSheetContainer" managed-name="The49.Maui.BottomSheet.BottomSheetContainer, The49.Maui.BottomSheet" managed-type-token-id="33554451" />
+    <entry java-name="crc64ec3c54a6f007a048/BottomSheetController_EdgeToEdgeCallback" managed-name="The49.Maui.BottomSheet.BottomSheetController+EdgeToEdgeCallback, The49.Maui.BottomSheet" managed-type-token-id="33554462" />
+    <entry java-name="crc64ec3c54a6f007a048/BottomSheetController_EdgeToEdgeListener" managed-name="The49.Maui.BottomSheet.BottomSheetController+EdgeToEdgeListener, The49.Maui.BottomSheet" managed-type-token-id="33554463" />
+    <entry java-name="crc64ec3c54a6f007a048/BottomSheetController_BottomSheetInsetsAnimationCallback" managed-name="The49.Maui.BottomSheet.BottomSheetController+BottomSheetInsetsAnimationCallback, The49.Maui.BottomSheet" managed-type-token-id="33554464" />
+    <entry java-name="crc64ec3c54a6f007a048/SheetRadiusDrawable" managed-name="The49.Maui.BottomSheet.SheetRadiusDrawable, The49.Maui.BottomSheet" managed-type-token-id="33554453" />
+    <entry java-name="crc64ec3c54a6f007a048/StayOnFrontView" managed-name="The49.Maui.BottomSheet.StayOnFrontView, The49.Maui.BottomSheet" managed-type-token-id="33554454" />
+  </managed-to-java>
+</api>

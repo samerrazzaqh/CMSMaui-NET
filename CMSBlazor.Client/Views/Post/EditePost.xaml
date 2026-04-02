@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Toolkit.TextInputLayout;assembly=Syncfusion.Maui.Toolkit"
+             xmlns:icon="clr-namespace:CMSBlazor.Client.Utilities"
+             x:Class="CMSBlazor.Client.Views.Post.EditePost">
+ 
+    
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}"
+                                   StatusBarStyle="Default" />
+    </ContentPage.Behaviors>
+
+    <NavigationPage.TitleView>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Edite Post" Grid.Column="0" FontSize="18" VerticalOptions="Center" HorizontalOptions="Start"></Label>
+
+            <StackLayout Grid.Column="1" HorizontalOptions="EndAndExpand" Orientation="Horizontal" Margin="0,5,5,5">
+                <Button HorizontalOptions="End" Clicked="BtnClose_OnClicked" Text="{x:Static icon:IconFont.Close}"
+                        Style="{x:StaticResource GoogleFont }" TextColor="#776CE6" BackgroundColor="Transparent"
+                        BorderWidth="1" BorderColor="Transparent" x:Name="btnClose" />
+            </StackLayout>
+        </Grid>
+    </NavigationPage.TitleView>
+
+    <!-- ======================== -->
+    
+    
+      <ScrollView>
+        <Grid RowDefinitions="1,*,Auto">
+
+            <BoxView Grid.Row="0" BackgroundColor="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}">
+                <BoxView.Shadow>
+                    <Shadow Brush="{AppThemeBinding Dark=White,Light=Black}" Offset="0,0" Radius="5" Opacity="0.5" />
+                </BoxView.Shadow>
+            </BoxView>
+
+            <Border Grid.Row="1" HorizontalOptions="Fill"
+                    Margin="5" BackgroundColor="Transparent"
+                    VerticalOptions="Fill"
+                    StrokeShape="RoundRectangle 20"
+                    StrokeThickness="0.5"
+                    Stroke="{AppThemeBinding Dark=White,Light=Black}">
+
+
+                <Grid RowDefinitions="100,200,Auto,100,Auto,Auto" Padding="10" ColumnSpacing="10">
+                    <!-- ========Title========== -->
+                    <inputLayout:SfTextInputLayout  Grid.Row="0" Hint="Title" HeightRequest="100" Padding="5,0,0,0" 
+                                                    x:Name="etTitle" ContainerType="Outlined" Stroke="#776CE6"
+                                                    OutlineCornerRadius="8" VerticalOptions="Start">
+                        <inputLayout:SfTextInputLayout.HintLabelStyle>
+                            <inputLayout:LabelStyle TextColor="Gray" />
+                        </inputLayout:SfTextInputLayout.HintLabelStyle>
+                        <Editor x:Name="entryTitle" MaxLength="100"/>
+                    </inputLayout:SfTextInputLayout>
+                    <!-- =======PostContent=========== -->
+                    <inputLayout:SfTextInputLayout  Grid.Row="1" HeightRequest="200" Hint="PostContent" Padding="5,0,0,0" 
+                                                    x:Name="etPostContent" ContainerType="Outlined" Stroke="#776CE6"
+                                                    OutlineCornerRadius="8" VerticalOptions="Start">
+                        <inputLayout:SfTextInputLayout.HintLabelStyle>
+                            <inputLayout:LabelStyle TextColor="Gray" />
+                        </inputLayout:SfTextInputLayout.HintLabelStyle>
+                        <Editor x:Name="entryPostContent" />
+                    </inputLayout:SfTextInputLayout>
+                    <!-- =======Image=========== -->
+                    <Border Grid.Row="2"  BackgroundColor="Transparent" StrokeThickness="1" VerticalOptions="Start"
+                             Margin="0,10" StrokeShape="RoundRectangle 10" Stroke= "#776CE6">
+                        <Grid RowDefinitions="*,*" VerticalOptions="Start">
+                            <Image Grid.Row="0" x:Name="imagePost" VerticalOptions="Start" Aspect="AspectFit"/>
+                            <Button Grid.Row="1" HorizontalOptions="Start" Text="{x:Static icon:IconFont.Photo_camera}"
+                                    Style="{x:StaticResource GoogleFont }" Clicked="BtnUploadimg_OnClicked" TextColor="#776CE6" CornerRadius="10"
+                                    BackgroundColor="Transparent"  x:Name="btnUploadimg" HeightRequest="50"/>
+                        </Grid>
+                    </Border>
+                    
+                    <!-- =======LinkVideo=========== -->
+                    <inputLayout:SfTextInputLayout  Grid.Row="3" Hint="Link Embed Video " HeightRequest="100" Padding="5,0,0,0" 
+                                                    x:Name="etLinkVideo" ContainerType="Outlined" Stroke="#776CE6"
+                                                    OutlineCornerRadius="8" VerticalOptions="Start">
+                        <inputLayout:SfTextInputLayout.HintLabelStyle>
+                            <inputLayout:LabelStyle TextColor="Gray" />
+                        </inputLayout:SfTextInputLayout.HintLabelStyle>
+                        <Editor x:Name="entryLinkVideo" />
+                    </inputLayout:SfTextInputLayout>
+                    <!-- =======Is Publish?=========== -->
+                    <Border Grid.Row="4"  BackgroundColor="Transparent" StrokeThickness="1" VerticalOptions="Start"
+                             StrokeShape="RoundRectangle 10" Stroke= "#776CE6">
+                        <Grid ColumnDefinitions="50,*" Margin="20" >
+                            <CheckBox Grid.Column="0" x:Name="chBlock" Color="#776CE6" VerticalOptions="Center" HorizontalOptions="Start"></CheckBox>
+                            <Label Grid.Column="1"  FontAttributes="Bold" Text="Is Publish?" VerticalOptions="Center" HorizontalOptions="Start"/>
+                        </Grid>
+                    </Border>
+                    <!-- =======Select a Category=========== -->
+                    <Border Grid.Row="5"  BackgroundColor="Transparent" StrokeThickness="1" VerticalOptions="Start"
+                            Margin="0,10" Padding="10" StrokeShape="RoundRectangle 10" Stroke= "#776CE6">
+                        <Picker Title="Select a Category"  x:Name="pickerCategory" BackgroundColor="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}"
+                                ItemDisplayBinding="{Binding CatName}" HeightRequest="50" />
+                    </Border>
+                    
+                    
+                </Grid>
+            </Border>
+            
+            <Button x:Name="btUpdate" Clicked="BtUpdate_OnClicked" Grid.Row="2" WidthRequest="150" FontSize="18" CornerRadius="10" Margin="20" Text="Update" HeightRequest="50" TextColor="White" BackgroundColor="#776CE6" VerticalOptions="Start" HorizontalOptions="Start"></Button>
+
+        </Grid>
+
+    </ScrollView>
+    
+    
+    
+    
+</ContentPage>

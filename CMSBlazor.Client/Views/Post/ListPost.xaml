@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:icon="clr-namespace:CMSBlazor.Client.Utilities"
+             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Toolkit.TextInputLayout;assembly=Syncfusion.Maui.Toolkit"
+             BackgroundColor="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}"
+             x:Class="CMSBlazor.Client.Views.Post.ListPost">
+
+    
+    <Shell.TitleView>
+        <Grid ColumnDefinitions ="*,Auto">
+            <SearchBar Grid.Column="0" x:Name="searchPost"  Placeholder="Search" TextChanged="SearchPost_OnTextChanged"/>
+            <StackLayout Grid.Column="1" HorizontalOptions="EndAndExpand" Orientation="Horizontal" Margin="0,5,5,5">
+                <Button x:Name="btAdd" Clicked="BtAdd_OnClicked" HorizontalOptions="End" Text="{x:Static icon:IconFont.Add}" Style="{x:StaticResource GoogleFont }" TextColor="#776CE6" BackgroundColor="Transparent" BorderWidth="1" BorderColor="Transparent" />
+            </StackLayout>
+        </Grid>
+    </Shell.TitleView>
+    
+
+    <Grid RowDefinitions="1,*">
+
+        <BoxView Grid.Row="0" BackgroundColor="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}">
+            <BoxView.Shadow>
+                <Shadow Brush="{AppThemeBinding Dark=White,Light=Black}" Offset="0,0" Radius="5" Opacity="0.5" />
+            </BoxView.Shadow>
+        </BoxView>
+
+        <Grid RowDefinitions="50,*" Grid.Row="1" HorizontalOptions="Fill"
+              Margin="10" BackgroundColor="Transparent"
+              VerticalOptions="Fill">
+
+
+            <Grid ColumnDefinitions="*,*,*" Grid.Row="0" Margin="10" ColumnSpacing="10">
+                <Label Grid.Column="0" Text="Title" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Center" />
+                <Label Grid.Column="1" Text="Auther" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Center" />
+                <Label Grid.Column="2" Text="Category" BackgroundColor="Transparent" VerticalOptions="Center" HorizontalOptions="Center" />
+            </Grid>
+
+            <CollectionView Grid.Row="1" x:Name="listPost" Margin="10" BackgroundColor="Transparent"
+                            RemainingItemsThreshold="1"
+                            RemainingItemsThresholdReached="ListPost_OnRemainingItemsThresholdReached">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical"
+                                       ItemSpacing="10">
+                    </LinearItemsLayout>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+
+                        <SwipeView>
+                            <SwipeView.LeftItems>
+                                <SwipeItems>
+                                    <SwipeItemView x:Name="lEditSwip" IsVisible="{Binding IsEnabledEdit}">
+                                        <Button HeightRequest="50" Margin="5" HorizontalOptions="End"
+                                                Text="{x:Static icon:IconFont.Edit}"
+                                                Style="{x:StaticResource GoogleFont }" TextColor="#776CE6"
+                                                CornerRadius="10" BackgroundColor="Transparent" BorderWidth="1"
+                                                BorderColor="#776CE6" x:Name="btnSettings"
+                                                Clicked="BtnSettings_OnClicked" CommandParameter="{Binding PostId}" />
+                                    </SwipeItemView>
+                                    <SwipeItemView x:Name="lReadSwip" IsVisible="{Binding IsEnabledEdit}">
+                                        <Button HeightRequest="50" Margin="5" HorizontalOptions="End"
+                                                Text="{x:Static icon:IconFont.Read_more}"
+                                                Style="{x:StaticResource GoogleFont }" TextColor="DeepSkyBlue"
+                                                CornerRadius="10" BackgroundColor="Transparent" BorderWidth="1"
+                                                BorderColor="DeepSkyBlue" CommandParameter="{Binding PostId}" />
+                                    </SwipeItemView>
+                                </SwipeItems>
+                            </SwipeView.LeftItems>
+                            <SwipeView.RightItems>
+                                <SwipeItems>
+                                    <SwipeItemView x:Name="lDeleteSwip" IsVisible="{Binding IsEnabledDelete}">
+                                        <Button HeightRequest="50" Margin="5" HorizontalOptions="End"
+                                                Text="{x:Static icon:IconFont.Delete}"
+                                                Style="{x:StaticResource GoogleFont }" TextColor="OrangeRed"
+                                                BackgroundColor="Transparent" BorderWidth="1" BorderColor="OrangeRed"
+                                                CornerRadius="10" x:Name="btnDelete" Clicked="BtnDelete_OnClicked"
+                                                CommandParameter="{Binding PostId}" />
+                                    </SwipeItemView>
+                                </SwipeItems>
+                            </SwipeView.RightItems>
+
+
+                            <ContentView>
+                                <Border  HeightRequest="50" BackgroundColor="Transparent" StrokeThickness="1" Padding="10,0" StrokeShape="RoundRectangle 10" Stroke="#776CE6">
+                                    <Grid ColumnDefinitions="*,*,*" ColumnSpacing="10">
+                                        <Label Grid.Column="0"
+                                               Text="{Binding Title}"
+                                               BackgroundColor="Transparent"
+                                               VerticalOptions="Center"
+                                               HorizontalOptions="Center" />
+                                        <Label Grid.Column="1"
+                                               Text="{Binding Auther}"
+                                               BackgroundColor="Transparent"
+                                               VerticalOptions="Center"
+                                               HorizontalOptions="Center" />
+                                        <Label Grid.Column="2"
+                                               Text="{Binding CatName}"
+                                               BackgroundColor="Transparent"
+                                               VerticalOptions="Center"
+                                               HorizontalOptions="Center" />
+                                               
+                                    </Grid>
+                                </Border>
+
+                            </ContentView>
+                        </SwipeView>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.Footer>
+                    <Grid>
+                        <ActivityIndicator x:Name="IndicatorLoadMore" IsEnabled="False" IsRunning="False" />
+                    </Grid>
+                </CollectionView.Footer>
+            </CollectionView>
+        </Grid>
+
+
+    </Grid>
+
+
+</ContentPage>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:carousel="clr-namespace:Syncfusion.Maui.Toolkit.Carousel;assembly=Syncfusion.Maui.Toolkit"
+             x:Class="CMSBlazor.Client.Views.Home.MainPosts">
+
+    <Grid RowDefinitions="200,150,*">
+        <StackLayout Grid.Row="0" Spacing="0">
+                <CarouselView x:Name="carouselPost"  PeekAreaInsets="30" VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never">
+                    <CarouselView.ItemsLayout>
+                        <LinearItemsLayout Orientation="Horizontal" SnapPointsAlignment="Center"
+                                           SnapPointsType="MandatorySingle" />
+                    </CarouselView.ItemsLayout>
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Frame Margin="5" Padding="0" CornerRadius="0" HasShadow="True"
+                                       IsClippedToBounds="True">
+                                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                        <Image x:Name="BannerImage" Aspect="AspectFill" HeightRequest="200"
+                                               HorizontalOptions="FillAndExpand" Source="{Binding PostImg}"
+                                               VerticalOptions="FillAndExpand" />
+                                        <StackLayout BackgroundColor="#55000000" HeightRequest="40"
+                                                     VerticalOptions="EndAndExpand">
+                                            <Label Margin="10" FontAttributes="Bold" FontSize="14"
+                                                   HorizontalOptions="CenterAndExpand"
+                                                   LineBreakMode="TailTruncation" Text="{Binding Title}"
+                                                   TextColor="White" VerticalOptions="CenterAndExpand" />
+                                        </StackLayout>
+                                    </Grid>
+                                </Frame>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+                <!-- <IndicatorView x:Name="IV1" HorizontalOptions="Center" IndicatorColor="LightGray" -->
+                <!--                IndicatorSize="10" SelectedIndicatorColor="DarkGray" /> -->
+            </StackLayout>
+
+
+        <CollectionView Grid.Row="1" x:Name="storyList" Margin="20" BackgroundColor="Transparent" RemainingItemsThreshold="0"
+                        RemainingItemsThresholdReached="StoryPost_OnRemainingItemsThresholdReached" VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never">
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Horizontal"
+                                   ItemSpacing="10">
+                </LinearItemsLayout>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <ContentView>
+                        <toolkit:AvatarView x:Name="imgProfile" ImageSource="{Binding PostImg}" BorderColor="#776CE6" BorderWidth="0" HeightRequest="70" WidthRequest="70" CornerRadius="50"/>
+                    </ContentView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <CollectionView Grid.Row="2" x:Name="postsList" Margin="20,10,20,0" BackgroundColor="Transparent" RemainingItemsThreshold="0"
+                        RemainingItemsThresholdReached="ListPost_OnRemainingItemsThresholdReached" VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout 
+                    Orientation="Vertical"
+                    Span="{OnPlatform Android=1,Default=3,iOS=1}" VerticalItemSpacing="16" HorizontalItemSpacing="16" />
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <ContentView>
+                        <Frame BorderColor="Gray" VerticalOptions="Start" HasShadow="True" CornerRadius="20"  Padding="0" IsClippedToBounds="True">
+                            <Grid RowDefinitions="*,Auto">
+                                <Image Grid.Row="0" x:Name="BannerImage" Aspect="AspectFill" HeightRequest="200"
+                                       HorizontalOptions="FillAndExpand" Source="{Binding PostImg}"
+                                       VerticalOptions="FillAndExpand" />
+                                <Grid ColumnDefinitions="*,Auto" Grid.Row="1"  HorizontalOptions="Start"  VerticalOptions="Center" Margin="10">
+                                    <Label Grid.Column="0" FontAttributes="Bold" FontSize="14"
+                                           HorizontalOptions="Start"
+                                           LineBreakMode="TailTruncation" Text="{Binding Title}" 
+                                           VerticalOptions="Center" />
+                                    <Button Grid.Column="1" Text="More..." x:Name="btnMore" Clicked="BtnMore_OnClicked" CornerRadius="18" FontAttributes="Bold" BackgroundColor="Transparent" HeightRequest="50" BorderWidth="0"
+                                            CommandParameter="{Binding PostId}" />
+                                </Grid>
+                            </Grid>
+                        </Frame>
+                    </ContentView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            <CollectionView.Footer>
+                <Grid>
+                    <ActivityIndicator x:Name="IndicatorLoadMore" IsEnabled="False" IsRunning="False" />
+                </Grid>
+            </CollectionView.Footer>
+        </CollectionView>
+
+
+    </Grid>
+
+</ContentView>

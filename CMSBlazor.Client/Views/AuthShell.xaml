@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+       x:Class="CMSBlazor.Client.Views.AuthShell"
+       xmlns:pages="clr-namespace:CMSBlazor.Client.Views.Account"
+       Shell.BackgroundColor="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}"
+       Shell.ForegroundColor="{AppThemeBinding Dark=White,Light=Black}"
+       Shell.TitleColor="{AppThemeBinding Dark=White,Light=Black}"
+       FlyoutBackground="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}">
+
+    <Shell.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}"
+                                   StatusBarStyle="{AppThemeBinding Dark=LightContent,Light=DarkContent}"/>
+    </Shell.Behaviors>
+
+
+     <ShellContent ContentTemplate="{DataTemplate pages:LoginPage}"
+                    Route="LoginPage" />
+
+</Shell>

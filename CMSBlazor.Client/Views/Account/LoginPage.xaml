@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CMSBlazor.Client.Views.Account.LoginPage"
+             xmlns:icon="clr-namespace:CMSBlazor.Client.Utilities"
+             xmlns:entry="clr-namespace:CMSBlazor.Client.Renderers"
+             xmlns:behavior="clr-namespace:CMSBlazor.Client.Renderers"
+             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Toolkit.TextInputLayout;assembly=Syncfusion.Maui.Toolkit"
+             Title=" "
+             BackgroundColor="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}">
+
+
+
+
+    <Grid RowDefinitions="1,*">
+
+        <BoxView Grid.Row="0" BackgroundColor="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}">
+            <BoxView.Shadow>
+                 <Shadow Brush="{AppThemeBinding Dark=White,Light=Black}"
+                         Offset="0,0"
+                        Radius="5"
+                        Opacity="0.5" />
+            </BoxView.Shadow>
+        </BoxView>
+
+
+           <ScrollView Grid.Row="1">
+                <Grid RowDefinitions="Auto,*" RowSpacing="10">
+                    <Border StrokeShape= "RoundRectangle 10" StrokeThickness="0" Padding="20" Margin="2" BackgroundColor="#776CE6" VerticalOptions="Start" HorizontalOptions="Fill" Grid.Row="0">
+                         <Border.Shadow>
+                            <Shadow Brush="Black" Radius="10" Opacity="0.5" />
+                        </Border.Shadow>
+                         <Label TextColor="White" FontAttributes="Bold" HorizontalOptions="Center" FontSize="Header" Text="Login"/>
+                    </Border>
+
+                    
+                    <Border BackgroundColor="Transparent" Grid.Row="1" StrokeShape= "RoundRectangle 10"  StrokeThickness="0.5" Margin="20,0" Padding="15" VerticalOptions="Center" HorizontalOptions="Fill">
+                        <Border.Stroke>
+                              <LinearGradientBrush EndPoint="0,1">
+                                    <GradientStop Color="#776CE6" Offset="0.1" />
+                                    <GradientStop Color="#776CE6" Offset="1.0" />
+                              </LinearGradientBrush>
+                        </Border.Stroke>
+                       <Grid RowDefinitions="*,*,40,Auto,1,40" RowSpacing="10" Padding="10">
+                          
+                           <inputLayout:SfTextInputLayout Hint="Email or UserName"  Padding="5,0,0,0"  Grid.Row="0"  x:Name="etEmailorUserName" ContainerType="Outlined" Stroke="#776CE6" OutlineCornerRadius="8">
+                               <inputLayout:SfTextInputLayout.HintLabelStyle>
+                                   <inputLayout:LabelStyle TextColor="Gray"/>
+                               </inputLayout:SfTextInputLayout.HintLabelStyle>
+                               <Entry x:Name="entryEmailorUserName" TextChanged="EntryEmailorUserName_OnTextChanged" />
+                           </inputLayout:SfTextInputLayout>
+
+                           <inputLayout:SfTextInputLayout Hint="Password"  x:Name="etPassword" Padding="5,0,0,0" Grid.Row="1" EnablePasswordVisibilityToggle="True" ContainerType="Outlined" Stroke="#776CE6" OutlineCornerRadius="8">
+                               <inputLayout:SfTextInputLayout.HintLabelStyle>
+                                   <inputLayout:LabelStyle TextColor="Gray"/>
+                               </inputLayout:SfTextInputLayout.HintLabelStyle>
+                               <Entry x:Name="entryPassword"  TextChanged="EntryPassword_OnTextChanged"/>
+                           </inputLayout:SfTextInputLayout>
+
+                           <Grid Grid.Row="2" ColumnDefinitions="*,*">
+                              <Button Grid.Column="0" Clicked="btnLogin_Clicked" x:Name="btnLogin" Text="Login" BackgroundColor="#776CE6"
+                                       TextColor="White" CornerRadius="10" HorizontalOptions="Start"  WidthRequest="100"/>
+
+                                <Border x:Name="IndicatorBorder" IsVisible="False" HeightRequest="40" WidthRequest="100"
+                                    StrokeShape= "RoundRectangle 10" StrokeThickness="0"
+                                    BackgroundColor="#776CE6" VerticalOptions="Start"
+                                    HorizontalOptions="Start" Grid.Column="0">
+                                    <ActivityIndicator BackgroundColor="Transparent" Color="White" IsRunning="True" />
+                                </Border>
+
+                      
+                     
+                               <Button Grid.Column="1" x:Name="btnRegister" Clicked="btnRegister_Clicked" Text="Register" BackgroundColor="#776CE6"
+                                   TextColor="White" CornerRadius="10" HorizontalOptions="End" WidthRequest="100"/>
+                           </Grid>
+                   
+
+                            <Grid Grid.Row="3" RowDefinitions="*,*" RowSpacing="15">
+                                <Button Grid.Row="0" Clicked="btnForgotPassword_Clicked" x:Name="btnForgotPassword" HorizontalOptions="Center" BackgroundColor="Transparent" TextColor="#4285F4" Text="Forgot Password ?"/>
+                                <Button Grid.Row="1" x:Name="btnConfirmationEmail" Clicked="btnConfirmationEmail_Clicked" HorizontalOptions="Center" WidthRequest="200" BackgroundColor="Transparent" TextColor="#4285F4"  Text="Confirmation Email !"/>
+                           </Grid>
+
+                            <BoxView Grid.Row="4"  BackgroundColor="#776CE6"/>
+
+                           <Grid Grid.Row="5" ColumnDefinitions="*,*">
+                               <Button Grid.Column="0" Text="Facebook" BackgroundColor="#4267B2"
+                                   TextColor="White" CornerRadius="5" HorizontalOptions="Start" WidthRequest="100"/>
+                                <Button Grid.Column="1" Text="Google+" BackgroundColor="#DB4437"
+                                   TextColor="White" CornerRadius="5" HorizontalOptions="End" WidthRequest="100"/>
+                           </Grid>
+
+                       </Grid>
+
+                
+
+                    </Border>
+
+
+                </Grid>
+           </ScrollView>
+        
+    </Grid>
+
+
+
+</ContentPage>

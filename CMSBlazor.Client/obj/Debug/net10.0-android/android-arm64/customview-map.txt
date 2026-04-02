@@ -1,0 +1,85 @@
+@string/appbar_scrolling_view_behavior;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/layout/fragment_backstack.xml
+@string/appbar_scrolling_view_behavior;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/layout/navigationlayout.xml
+@string/bottom_sheet_behavior;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/202/jl/res/layout/the49_maui_bottom_sheet_design.xml
+adaptive-icon;obj/Debug/net10.0-android/android-arm64/resizetizer/r/mipmap-anydpi-v26/appicon_round.xml
+adaptive-icon;obj/Debug/net10.0-android/android-arm64/resizetizer/r/mipmap-anydpi-v26/appicon.xml
+alpha;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/198/jl/res/anim/enterfromleft.xml
+alpha;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/198/jl/res/anim/exittoleft.xml
+alpha;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/anim/nav_default_enter_anim.xml
+alpha;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/anim/nav_default_exit_anim.xml
+alpha;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/anim/nav_default_pop_enter_anim.xml
+alpha;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/anim/nav_default_pop_exit_anim.xml
+androidx.coordinatorlayout.widget.CoordinatorLayout;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/198/jl/res/layout/shellcontent.xml
+androidx.coordinatorlayout.widget.CoordinatorLayout;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/layout/navigationlayout.xml
+androidx.coordinatorlayout.widget.CoordinatorLayout;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/202/jl/res/layout/the49_maui_bottom_sheet_design.xml
+androidx.drawerlayout.widget.DrawerLayout;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/layout/drawer_layout.xml
+androidx.fragment.app.FragmentContainerView;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/layout/fragment_backstack.xml
+androidx.fragment.app.FragmentContainerView;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/layout/navigationlayout.xml
+androidx.media3.ui.PlayerView;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/195/jl/res/layout/textureview.xml
+attr;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/values/attr.xml
+background;obj/Debug/net10.0-android/android-arm64/resizetizer/r/mipmap-anydpi-v26/appicon_round.xml
+background;obj/Debug/net10.0-android/android-arm64/resizetizer/r/mipmap-anydpi-v26/appicon.xml
+bitmap;obj/Debug/net10.0-android/android-arm64/resizetizer/sp/drawable-v31/maui_splash_image.xml
+bitmap;obj/Debug/net10.0-android/android-arm64/resizetizer/sp/drawable/maui_splash_image.xml
+cache-path;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/201/jl/res/xml/microsoft_maui_essentials_fileprovider_file_paths.xml
+color;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/values/colors.xml
+color;obj/Debug/net10.0-android/android-arm64/res/values/colors.xml
+color;obj/Debug/net10.0-android/android-arm64/resizetizer/sp/values/maui_colors.xml
+com.google.android.material.appbar.AppBarLayout;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/198/jl/res/layout/flyoutcontent.xml
+com.google.android.material.appbar.AppBarLayout;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/198/jl/res/layout/shellcontent.xml
+com.google.android.material.appbar.AppBarLayout;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/layout/navigationlayout.xml
+declare-styleable;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/values/attr.xml
+domain;obj/Debug/net10.0-android/android-arm64/res/xml/network_security_config.xml
+domain-config;obj/Debug/net10.0-android/android-arm64/res/xml/network_security_config.xml
+external-cache-path;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/201/jl/res/xml/microsoft_maui_essentials_fileprovider_file_paths.xml
+external-path;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/201/jl/res/xml/microsoft_maui_essentials_fileprovider_file_paths.xml
+foreground;obj/Debug/net10.0-android/android-arm64/resizetizer/r/mipmap-anydpi-v26/appicon_round.xml
+foreground;obj/Debug/net10.0-android/android-arm64/resizetizer/r/mipmap-anydpi-v26/appicon.xml
+FrameLayout;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/202/jl/res/layout/the49_maui_bottom_sheet_design.xml
+item;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/199/jl/res/values/values.xml
+item;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/drawable/maui_splash.xml
+item;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/values/styles.xml
+item;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/205/jl/res/values/values.xml
+item;obj/Debug/net10.0-android/android-arm64/resizetizer/sp/drawable-v31/maui_splash_image.xml
+item;obj/Debug/net10.0-android/android-arm64/resizetizer/sp/drawable/maui_splash_image.xml
+layer-list;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/drawable/maui_splash_image.xml
+layer-list;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/drawable/maui_splash.xml
+layer-list;obj/Debug/net10.0-android/android-arm64/resizetizer/sp/drawable-v31/maui_splash_image.xml
+layer-list;obj/Debug/net10.0-android/android-arm64/resizetizer/sp/drawable/maui_splash_image.xml
+microsoft.maui.controls.platform.compatibility.ShellFlyoutLayout;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/198/jl/res/layout/flyoutcontent.xml
+monochrome;obj/Debug/net10.0-android/android-arm64/resizetizer/r/mipmap-anydpi-v26/appicon_round.xml
+monochrome;obj/Debug/net10.0-android/android-arm64/resizetizer/r/mipmap-anydpi-v26/appicon.xml
+network-security-config;obj/Debug/net10.0-android/android-arm64/res/xml/network_security_config.xml
+paths;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/201/jl/res/xml/microsoft_maui_essentials_fileprovider_file_paths.xml
+resources;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/198/jl/res/values/strings.xml
+resources;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/199/jl/res/values/values.xml
+resources;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/values/attr.xml
+resources;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/values/colors.xml
+resources;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/values/styles.xml
+resources;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/205/jl/res/values/values.xml
+resources;obj/Debug/net10.0-android/android-arm64/res/values/colors.xml
+resources;obj/Debug/net10.0-android/android-arm64/resizetizer/sp/values/maui_colors.xml
+set;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/198/jl/res/anim/enterfromleft.xml
+set;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/198/jl/res/anim/enterfromright.xml
+set;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/198/jl/res/anim/exittoleft.xml
+set;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/198/jl/res/anim/exittoright.xml
+set;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/anim/nav_default_enter_anim.xml
+set;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/anim/nav_default_exit_anim.xml
+set;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/anim/nav_default_pop_enter_anim.xml
+set;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/anim/nav_default_pop_exit_anim.xml
+set;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/anim/nav_modal_default_enter_anim.xml
+set;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/anim/nav_modal_default_exit_anim.xml
+string;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/198/jl/res/values/strings.xml
+string;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/199/jl/res/values/values.xml
+style;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/values/styles.xml
+translate;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/198/jl/res/anim/enterfromleft.xml
+translate;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/198/jl/res/anim/enterfromright.xml
+translate;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/198/jl/res/anim/exittoleft.xml
+translate;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/198/jl/res/anim/exittoright.xml
+translate;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/anim/nav_default_enter_anim.xml
+translate;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/anim/nav_default_exit_anim.xml
+translate;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/anim/nav_default_pop_enter_anim.xml
+translate;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/anim/nav_default_pop_exit_anim.xml
+translate;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/anim/nav_modal_default_enter_anim.xml
+translate;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/200/jl/res/anim/nav_modal_default_exit_anim.xml
+View;/Volumes/Samer Disk/Samer 1/IT/Mobile/MAUI/MauiXML/CMSBlazor/CMSBlazor.Client/obj/Debug/net10.0-android/android-arm64/lp/202/jl/res/layout/the49_maui_bottom_sheet_design.xml

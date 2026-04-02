@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:inputLayout="clr-namespace:Syncfusion.Maui.Toolkit.TextInputLayout;assembly=Syncfusion.Maui.Toolkit"
+             xmlns:icon="clr-namespace:CMSBlazor.Client.Utilities"
+             x:Class="CMSBlazor.Client.Views.Home.ReCommentsPage">
+
+
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}"
+                                   StatusBarStyle="Default" />
+    </ContentPage.Behaviors>
+
+    <NavigationPage.TitleView>
+        <Grid ColumnDefinitions="*,auto">
+            <Label x:Name="lbTitle" Grid.Column="0" FontSize="18" VerticalOptions="Center" HorizontalOptions="Start"></Label>
+
+            <StackLayout Grid.Column="1" HorizontalOptions="EndAndExpand" Orientation="Horizontal" Margin="0,5,5,5">
+                <Button HorizontalOptions="End" Clicked="BtnClose_OnClicked" Text="{x:Static icon:IconFont.Close}"
+                        Style="{x:StaticResource GoogleFont }" TextColor="#776CE6" BackgroundColor="Transparent"
+                        BorderWidth="1" BorderColor="Transparent" x:Name="btnClose" />
+            </StackLayout>
+        </Grid>
+    </NavigationPage.TitleView>
+
+    <!-- ======================== -->
+
+
+    <ScrollView>
+        <Grid RowDefinitions="auto,auto,auto,*" Margin="10">
+
+            <Frame Grid.Row="0" BorderColor="Gray" BackgroundColor="#776CE6" VerticalOptions="Start" HasShadow="True">
+                <Label x:Name="lbComments" TextColor="White" FontAttributes="Bold" HorizontalOptions="Center"
+                       FontSize="Header" />
+            </Frame>
+
+            <CollectionView Grid.Row="1" x:Name="listReComments" Margin="10" BackgroundColor="Transparent"
+                            RemainingItemsThreshold="1">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical"
+                                       ItemSpacing="10">
+                    </LinearItemsLayout>
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+
+                        <Frame BorderColor="Gray" VerticalOptions="Start" HasShadow="True">
+                            <Grid RowDefinitions="auto,auto,auto,auto">
+                                <!-- Comments -->
+                                <Grid Grid.Row="0" ColumnDefinitions="auto,*">
+                                    <toolkit:AvatarView Grid.Column="0" x:Name="imgProfile" Margin="0 ,0, 10, 0"
+                                                        ImageSource="{Binding UrlImageAuther}" BorderColor="#776CE6"
+                                                        BorderWidth="0"
+                                                        HeightRequest="50" WidthRequest="50" CornerRadius="50" />
+                                    <StackLayout Grid.Column="1" HorizontalOptions="Start" VerticalOptions="Center">
+                                        <Label Text="{Binding Auther}" TextColor="DodgerBlue" FontAttributes="Bold"></Label>
+                                        <Label Text="{Binding LCODatestring}" TextColor="Gray"></Label>
+                                    </StackLayout>
+                                </Grid>
+                                <Grid Grid.Row="1" ColumnDefinitions="*,auto" Margin="20,10,0,0">
+                                    <StackLayout Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Center">
+                                        <Label Text="{Binding ReTextComment}"
+                                               HorizontalOptions="Start" VerticalOptions="Center">
+                                        </Label>
+                                        <Button x:Name="btnLike" Text="{x:Static icon:IconFont.Favorite}"
+                                                HorizontalOptions="Start" VerticalOptions="Center"
+                                                Style="{x:StaticResource GoogleFont }" BackgroundColor="Transparent"
+                                                TextColor="#776CE6" BorderColor="Transparent" Margin="0,10,0,0" />
+                                    </StackLayout>
+                                    <Button Grid.Column="1" x:Name="btnEdit" Text="{x:Static icon:IconFont.Edit}"
+                                            HorizontalOptions="End" VerticalOptions="Center"
+                                            Style="{x:StaticResource GoogleFont }" BackgroundColor="Transparent"
+                                            TextColor="#776CE6" BorderColor="Transparent" Margin="10" />
+                                </Grid>
+                                <!-- Comments -->
+                                <!-- ========================== -->
+                                <Button Grid.Row="3" x:Name="btnReComments" Text="Reply Comments"
+                                        HorizontalOptions="Center"
+                                        VerticalOptions="Center" BackgroundColor="Transparent"
+                                        CommandParameter="{Binding CommentId}"
+                                        TextColor="#776CE6" BorderColor="Transparent" Margin="10" />
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+                <CollectionView.Footer>
+                    <Grid>
+                        <ActivityIndicator x:Name="IndicatorLoadMore" IsEnabled="False" IsRunning="False" />
+                    </Grid>
+                </CollectionView.Footer>
+            </CollectionView>
+
+            <Button Grid.Row="2" x:Name="btnMore" Text="Load More" HorizontalOptions="Center"
+                    VerticalOptions="Center" BackgroundColor="Transparent"
+                    TextColor="#776CE6" BorderColor="Transparent" Margin="10" />
+
+            <!-- Editor Comments -->
+            <Grid ColumnDefinitions="*,auto" Grid.Row="3" HeightRequest="100" HorizontalOptions="Start"
+                  VerticalOptions="End">
+                <inputLayout:SfTextInputLayout Grid.Column="0" x:Name="etComments" Padding="5,0,0,0"
+                                               ContainerType="Outlined" Stroke="#776CE6" OutlineCornerRadius="8">
+                    <inputLayout:SfTextInputLayout.HintLabelStyle>
+                        <inputLayout:LabelStyle TextColor="Gray" />
+                    </inputLayout:SfTextInputLayout.HintLabelStyle>
+                    <Editor x:Name="entryComments" />
+                </inputLayout:SfTextInputLayout>
+                <Button Grid.Column="1" x:Name="btnComments" HorizontalOptions="Center" VerticalOptions="Center"
+                        BackgroundColor="Transparent"
+                        TextColor="#776CE6" BorderColor="Transparent" Margin="10,0,0,0"
+                        Text="{x:Static icon:IconFont.Send}" Style="{x:StaticResource GoogleFont }" />
+            </Grid>
+
+
+        </Grid>
+    </ScrollView>
+
+
+</ContentPage>

@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CMSBlazor.Client.Views.Home.HomePage"
+             xmlns:icon="clr-namespace:CMSBlazor.Client.Utilities"
+             xmlns:tabView="clr-namespace:Syncfusion.Maui.Toolkit.TabView;assembly=Syncfusion.Maui.Toolkit"
+             xmlns:local="clr-namespace:CMSBlazor.Client.Views.Home"
+             BackgroundColor="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}"
+             Title="Home Page">
+ 
+ 
+ <tabView:SfTabView x:Name="tabView" TabBarBackground="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}" IndicatorBackground="#776CE6"
+                    TabBarPlacement="Top" EnableSwiping="False"  IndicatorWidthMode="Stretch" >
+     <!-- Define the items (tabs) of the SfTabView -->
+     <tabView:SfTabView.Items>
+         
+         
+         <!-- ==========MainPosts -->
+         <tabView:SfTabItem>
+             <tabView:SfTabItem.HeaderContent>
+                 <Grid RowDefinitions="Auto" ColumnSpacing="5" HorizontalOptions="Center" VerticalOptions="Center">
+                     <Label Grid.Column="0" Text="{x:Static icon:IconFont.Home}" Style="{x:StaticResource GoogleFont }"  TextColor="{AppThemeBinding Dark=White,Default=Black}"/>
+                 </Grid>
+             </tabView:SfTabItem.HeaderContent>
+             
+             <tabView:SfTabItem.Content>
+                 <local:MainPosts></local:MainPosts>
+             </tabView:SfTabItem.Content>
+         </tabView:SfTabItem>
+         
+         
+         <!-- ==========More View -->
+         <tabView:SfTabItem>
+             <tabView:SfTabItem.HeaderContent>
+                 <Grid RowDefinitions="Auto" ColumnSpacing="5" HorizontalOptions="Center" VerticalOptions="Center">
+                     <Label Grid.Column="0" Text="{x:Static icon:IconFont.View_day}" Style="{x:StaticResource GoogleFont }"  TextColor="{AppThemeBinding Dark=White,Default=Black}"/>
+                 </Grid>
+             </tabView:SfTabItem.HeaderContent>
+             <tabView:SfTabItem.Content>
+                 <Grid BackgroundColor="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}">
+                     <Button Grid.Row="0" Clicked="BtnForgotPassword_OnClicked" x:Name="btnForgotPassword" HorizontalOptions="Center" BackgroundColor="Transparent" TextColor="#4285F4" Text="Forgot Password ?"/>
+                 </Grid>
+             </tabView:SfTabItem.Content>
+         </tabView:SfTabItem>
+ 
+         <!-- ==========Person -->
+         <tabView:SfTabItem>
+             <tabView:SfTabItem.HeaderContent>
+                 <Grid RowDefinitions="Auto" ColumnSpacing="5" HorizontalOptions="Center" VerticalOptions="Center">
+                     <Label Grid.Column="0" Text="{x:Static icon:IconFont.Person}" Style="{x:StaticResource GoogleFont }"  TextColor="{AppThemeBinding Dark=White,Default=Black}"/>
+                 </Grid>
+             </tabView:SfTabItem.HeaderContent>
+             
+             <tabView:SfTabItem.Content>
+                 <Grid BackgroundColor="{AppThemeBinding Dark='#212121',Light='#F5F5F5'}" />
+             </tabView:SfTabItem.Content>
+         </tabView:SfTabItem>
+         
+         <!-- ==========MenuPage -->
+         <tabView:SfTabItem>
+             <tabView:SfTabItem.HeaderContent>
+                 <Grid RowDefinitions="Auto" ColumnSpacing="5" HorizontalOptions="Center" VerticalOptions="Center">
+                     <Label Grid.Column="0" Text="{x:Static icon:IconFont.Menu}" Style="{x:StaticResource GoogleFont }"  TextColor="{AppThemeBinding Dark=White,Default=Black}"/>
+                 </Grid>
+             </tabView:SfTabItem.HeaderContent>
+             
+             <tabView:SfTabItem.Content>
+                 <local:MenuPage></local:MenuPage>
+             </tabView:SfTabItem.Content>
+         </tabView:SfTabItem>
+ 
+ 
+     </tabView:SfTabView.Items>
+ </tabView:SfTabView>
+ 
+
+ 
+ 
+    
+
+</ContentPage>
